@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (isset($_SESSION['user'])) {
+    header("Location: profile.php"); 
+    exit();
+} else {
+    header("Location: login.php"); 
+    exit();
+}
+?>
+
 <?php include 'inc/header.php'; ?>
 <?php include 'inc/nav.php'; ?>
 
