@@ -6,6 +6,7 @@ USE school_system;
 CREATE TABLE Students (
 	id int PRIMARY KEY AUTO_INCREMENT,
     name varchar(255),
+    email VARCHAR(255)
     birthdate date,
     address varchar(255),
     parent_phone_num varchar(12)
@@ -37,12 +38,12 @@ CREATE TABLE Enrollments (
     FOREIGN KEY (course_id) REFERENCES Courses(id)
 );
 
-INSERT INTO Students (name, birthdate, address, parent_phone_num) VALUES
-('Ali Hassan', '2002-06-11', 'Cairo', '01213168412'),
-('Sara Ahmed', '2003-04-18', 'Giza', '01099887411'),
-('Mohaned Salah', '2001-10-23', 'Alexandria', '01588741236'),
-('Omar Fathy', '2004-01-05', 'Mansoura', '01147896521'),
-('Reem Adel', '2002-12-12', 'Zagazig', '01277889456');
+INSERT INTO Students (name, birthdate, address, parent_phone_num, email) VALUES
+('Ali Hassan', '2002-06-11', 'Cairo', '01213168412', 'ah@mail.com'),
+('Sara Ahmed', '2003-04-18', 'Giza', '01099887411', 'sa@mail.com'),
+('Mohaned Salah', '2001-10-23', 'Alexandria', '01588741236', 'ms@mail.com'),
+('Omar Fathy', '2004-01-05', 'Mansoura', '01147896521', 'of@mail.com'),
+('Reem Adel', '2002-12-12', 'Zagazig', '01277889456', 'ra@mail.com');
 
 INSERT INTO Instructors (name, department, salary, address, phone_num) VALUES
 ('Dr. Mohamed Ali', 'Computer Science', 15000, 'Cairo', '01011223344'),
